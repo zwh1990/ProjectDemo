@@ -1,19 +1,17 @@
-package com.example.admin.openwpsdemo;
+package com.example.admin.openwpsdemo.ui;
 
 import android.app.job.JobInfo;
 import android.app.job.JobScheduler;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Messenger;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.admin.openwpsdemo.R;
 import com.example.admin.openwpsdemo.service.BugUpLoadJobService;
 
 public class UpLoadBugActivity extends AppCompatActivity implements View.OnClickListener {

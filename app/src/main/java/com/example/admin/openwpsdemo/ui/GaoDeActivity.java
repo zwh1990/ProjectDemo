@@ -1,4 +1,4 @@
-package com.example.admin.openwpsdemo;
+package com.example.admin.openwpsdemo.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
+import com.example.admin.openwpsdemo.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

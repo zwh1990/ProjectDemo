@@ -1,4 +1,4 @@
-package com.example.admin.openwpsdemo;
+package com.example.admin.openwpsdemo.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.admin.openwpsdemo.R;
 import com.example.admin.openwpsdemo.adapter.RecAdapter;
 
 import java.util.ArrayList;

@@ -1,7 +1,9 @@
-package com.example.admin.openwpsdemo;
+package com.example.admin.openwpsdemo.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.admin.openwpsdemo.R;
 
 /**
  * 基本数据类型的判断

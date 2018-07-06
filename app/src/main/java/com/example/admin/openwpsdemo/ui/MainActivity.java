@@ -1,4 +1,4 @@
-package com.example.admin.openwpsdemo;
+package com.example.admin.openwpsdemo.ui;
 
 import android.Manifest;
 import android.content.Context;
@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.admin.openwpsdemo.LOGUtils;
+import com.example.admin.openwpsdemo.R;
 import com.example.admin.openwpsdemo.utils.Screen;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_upBugs;
     private Button bt_location;
     private Button bt_show;
-    private Button bt_rxjava;
+    private Button bt_gson;
     private PDFView pdfView;
 
     Integer pageNumber = 0;
@@ -101,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_upBugs = findViewById(R.id.bt_upBugs);
         bt_location = findViewById(R.id.bt_location);
         bt_show = findViewById(R.id.bt_show);
-        bt_rxjava = findViewById(R.id.bt_rxjava);
+        bt_gson = findViewById(R.id.bt_gson);
         pdfView = findViewById(R.id.pdfview);
 
 
@@ -116,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_upBugs.setOnClickListener(this);
         bt_location.setOnClickListener(this);
         bt_show.setOnClickListener(this);
-        bt_rxjava.setOnClickListener(this);
+        bt_gson.setOnClickListener(this);
 
     }
 
@@ -194,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
 
-            case R.id.bt_rxjava:
+            case R.id.bt_gson:
                 intent = new Intent(this, RxJavaActivity.class);
                 startActivity(intent);
                 break;

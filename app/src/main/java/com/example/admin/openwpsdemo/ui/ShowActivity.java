@@ -1,4 +1,4 @@
-package com.example.admin.openwpsdemo;
+package com.example.admin.openwpsdemo.ui;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -13,6 +13,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.example.admin.openwpsdemo.R;
 import com.example.admin.openwpsdemo.biz.DirectiveFeedbackBean;
 import com.example.admin.openwpsdemo.weight.SelectTextView;
 

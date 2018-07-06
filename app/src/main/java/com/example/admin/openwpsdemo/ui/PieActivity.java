@@ -1,21 +1,18 @@
-package com.example.admin.openwpsdemo;
+package com.example.admin.openwpsdemo.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.admin.openwpsdemo.R;
 import com.example.admin.openwpsdemo.biz.AnalysisChartBean;
 import com.example.admin.openwpsdemo.weight.compat.CompatPieChart;
-import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.example.admin.openwpsdemo.R.id.pieChart;
 
 public class PieActivity extends AppCompatActivity {
 

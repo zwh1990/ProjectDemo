@@ -1,11 +1,13 @@
-package com.example.admin.openwpsdemo;
+package com.example.admin.openwpsdemo.ui;
 
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.admin.openwpsdemo.LOGUtils;
+import com.example.admin.openwpsdemo.R;
+
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 public class FileActivity extends AppCompatActivity {

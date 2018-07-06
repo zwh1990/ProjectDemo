@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.example.admin.openwpsdemo.MainActivity">
+        tools:context="com.example.admin.openwpsdemo.ui.MainActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -95,10 +95,10 @@
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/bt_rxjava"
+                android:id="@+id/bt_gson"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RxIava测试"
+                android:text="Gson解析过滤null"
                 android:textSize="16sp" />
 
 
