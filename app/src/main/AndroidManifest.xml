@@ -77,7 +77,7 @@
 
         <activity android:name=".ui.PrimaryTypeActivity" />
         <activity android:name=".ui.ShowActivity" />
-        <activity android:name=".ui.RxJavaActivity"></activity>
+        <activity android:name=".ui.GsonActivity"></activity>
     </application>
 
 </manifest>

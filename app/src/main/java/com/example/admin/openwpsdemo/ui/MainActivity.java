@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.bt_gson:
-                intent = new Intent(this, RxJavaActivity.class);
+                intent = new Intent(this, GsonActivity.class);
                 startActivity(intent);
                 break;
 
