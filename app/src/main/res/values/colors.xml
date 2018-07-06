@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="pieOne">#b93b3b</color>
+    <color name="pieTwo">#f06a5c</color>
+    <color name="pieThree">#f87a26</color>
+    <color name="pieFour">#f8c426</color>
+    <color name="pieFive">#eaff00</color>
+    <color name="pieSix">#14f368</color>
+    <color name="pieSenven">#26f3ad</color>
+    <color name="pieEight">#00a559</color>
+    <color name="pieNine">#20f8fc</color>
+    <color name="pieTen">#00aeff</color>
+    <color name="pieEleven">#152791</color>
+    <color name="pieTwelve">#3d1af1</color>
+    <color name="pieThirteen">#7a1af1</color>
+    <color name="pieFourteen">#cf2eaf</color>
+    <color name="pieFifteen">#ea202e</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#333333</color>
+    <color name="grey">#eddcdc</color>
+
+    <!--案件总数圆环进度条颜色 -->
+    <color name="case_grey">#2EE8C3</color>
+
+
+</resources>

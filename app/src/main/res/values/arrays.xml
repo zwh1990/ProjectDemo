@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="colors">
+        <item>@color/pieOne</item>
+        <item>@color/pieTwo</item>
+        <item>@color/pieThree</item>
+        <item>@color/pieFour</item>
+        <item>@color/pieFive</item>
+        <item>@color/pieSix</item>
+    </integer-array>
+
+    <string-array name="directive_feedback">
+        <item>联系人</item>
+        <item>联系人电话(专线)</item>
+        <item>联系人电话(外线)</item>
+        <item>接收单位</item>
+        <item>反馈期限(天)</item>
+        <item>工作要求</item>
+        <item>指令类型</item>
+        <item>转发文号</item>
+        <item>是否自查</item>
+        <item>指令状态</item>
+        <item>是否合格</item>
+        <item>操作</item>
+    </string-array>
+
+
+
+</resources>

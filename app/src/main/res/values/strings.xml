@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">OpenWpsDemo</string>
+
+    <string name="filing_time">立案时间:</string>
+    <string name="hint_filing_time">请选择立案时间</string>
+
+    <string name="clue_name">线索名称</string>
+    <string name="clue_source">线索来源</string>
+    <string name="security_level">密级</string>
+    <string name="doc_code">文件编号</string>
+    <string name="doc_title">文件标题</string>
+    <string name="require_close_time">要求办结时间</string>
+    <string name="case_sort">案件类别</string>
+    <string name="behavior_feature">行为特征</string>
+    <string name="incoming_time">收文日期</string>
+    <string name="host_dep">主办单位</string>
+    <string name="is_important_clue">是否重要线索</string>
+    <string name="is_civil_servant">是否涉及公职人员</string>
+    <string name="important_industry">重点行业领域</string>
+    <string name="by_informer">被举报人</string>
+    <string name="involve_area">涉及区域</string>
+    <string name="is_scan_handle">是否阅处</string>
+    <string name="record_clue_source">补录线索来源</string>
+    <string name="record_person">录入人</string>
+    <string name="record_dep">录入单位</string>
+    <string name="record_time">录入时间</string>
+    <string name="case_brief">简要案情</string>
+    <string name="doc_content">文件内容</string>
+    <string name="leader_comments_content">领导批示内容</string>
+    <string name="mark">备注</string>
+    <string name="involve_gangdom_detail">涉黑线索详情</string>
+    <string name="accessory">附件</string>
+
+    <string name="involve_gangdom_person">涉黑人员信息列表</string>
+    <string name="clue_handle_info">线索处理信息</string>
+    <string name="send_dep_name">发动送单位名称</string>
+    <string name="business_type">业务类型</string>
+    <string name="send_time">发送时间</string>
+    <string name="accept_dep_name">接受单位名称</string>
+    <string name="handle_time">处置时间:%s</string>
+    <string name="input_person">录入人:%s</string>
+    <string name="directive_feedback">指令反馈信息</string>
+
+    <!-- 指令反馈信息 -->
+    <string name="contacts">联系人</string>
+    <string name="contacts_phone_in">联系人电话(专线)</string>
+    <string name="contacts_phone_out">联系人电话(外线)</string>
+    <string name="accept_dep">接收单位</string>
+    <string name="feedback_day">反馈期限(天)</string>
+    <string name="work_require">工作要求</string>
+    <string name="directive_type">指令类型</string>
+    <string name="transpond_number">转发文号</string>
+    <string name="is_self_inspection">是否自查</string>
+    <string name="directive_status">指令状态</string>
+    <string name="is_qualified">是否合格</string>
+    <string name="operate">操作</string>
+
+
+</resources>
