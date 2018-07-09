@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_location;
     private Button bt_show;
     private Button bt_gson;
+    private Button bt_threadLocal;
+    private Button bt_concurrence;
     private PDFView pdfView;
 
     Integer pageNumber = 0;
@@ -104,6 +106,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_location = findViewById(R.id.bt_location);
         bt_show = findViewById(R.id.bt_show);
         bt_gson = findViewById(R.id.bt_gson);
+        bt_threadLocal =  findViewById(R.id.bt_threadLocal);
+        bt_concurrence = findViewById(R.id.bt_concurrence);
         pdfView = findViewById(R.id.pdfview);
 
 
@@ -119,6 +123,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_location.setOnClickListener(this);
         bt_show.setOnClickListener(this);
         bt_gson.setOnClickListener(this);
+        bt_threadLocal.setOnClickListener(this);
+        bt_concurrence.setOnClickListener(this);
 
     }
 
@@ -198,6 +204,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bt_gson:
                 intent = new Intent(this, GsonActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_threadLocal:
+                intent = new Intent(this, ThreadLocalActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_concurrence:
+                intent = new Intent(this, ConcurrenceActivity.class);
                 startActivity(intent);
                 break;
 

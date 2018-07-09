@@ -101,6 +101,20 @@
                 android:text="Gson解析过滤null"
                 android:textSize="16sp" />
 
+            <Button
+                android:id="@+id/bt_threadLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ThraeadLocal的用法"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_concurrence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="并发"
+                android:textSize="16sp" />
+
 
         </LinearLayout>
 
