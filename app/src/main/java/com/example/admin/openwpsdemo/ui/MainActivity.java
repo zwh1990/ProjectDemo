@@ -13,6 +13,8 @@ import android.widget.Button;
 
 import com.example.admin.openwpsdemo.LOGUtils;
 import com.example.admin.openwpsdemo.R;
+import com.example.admin.openwpsdemo.ui.thread.ConcurrenceActivity;
+import com.example.admin.openwpsdemo.ui.thread.ThreadActivity;
 import com.example.admin.openwpsdemo.utils.Screen;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_gson;
     private Button bt_threadLocal;
     private Button bt_concurrence;
+    private Button bt_thread;
     private PDFView pdfView;
 
     Integer pageNumber = 0;
@@ -108,6 +111,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_gson = findViewById(R.id.bt_gson);
         bt_threadLocal =  findViewById(R.id.bt_threadLocal);
         bt_concurrence = findViewById(R.id.bt_concurrence);
+        bt_thread = findViewById(R.id.bt_thread);
         pdfView = findViewById(R.id.pdfview);
 
 
@@ -125,6 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_gson.setOnClickListener(this);
         bt_threadLocal.setOnClickListener(this);
         bt_concurrence.setOnClickListener(this);
+        bt_thread.setOnClickListener(this);
 
     }
 
@@ -214,6 +219,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bt_concurrence:
                 intent = new Intent(this, ConcurrenceActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_thread:
+                intent = new Intent(this, ThreadActivity.class);
                 startActivity(intent);
                 break;
 

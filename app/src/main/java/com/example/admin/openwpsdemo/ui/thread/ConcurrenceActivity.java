@@ -1,4 +1,4 @@
-package com.example.admin.openwpsdemo.ui;
+package com.example.admin.openwpsdemo.ui.thread;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

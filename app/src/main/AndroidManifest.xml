@@ -79,7 +79,8 @@
         <activity android:name=".ui.ShowActivity" />
         <activity android:name=".ui.GsonActivity" />
         <activity android:name=".ui.ThreadLocalActivity" />
-        <activity android:name=".ui.ConcurrenceActivity"></activity>
+        <activity android:name=".ui.thread.ConcurrenceActivity" />
+        <activity android:name=".ui.thread.ThreadActivity"></activity>
     </application>
 
 </manifest>

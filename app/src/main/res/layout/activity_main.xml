@@ -115,6 +115,13 @@
                 android:text="并发"
                 android:textSize="16sp" />
 
+            <Button
+                android:id="@+id/bt_thread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="多线程"
+                android:textSize="16sp" />
+
 
         </LinearLayout>
 
