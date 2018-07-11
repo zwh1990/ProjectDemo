@@ -104,9 +104,7 @@ public class ThreadActivity extends AppCompatActivity {
             for (int i = 0; i < 1000 ; i++) {
                 LOGUtils.w(TAG,"DemoRunnable--->" + Thread.currentThread().getName() + ","+ i);
             }
-
         }
     }
-
 
 }

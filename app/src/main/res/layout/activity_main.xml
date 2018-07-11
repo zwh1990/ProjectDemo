@@ -122,6 +122,13 @@
                 android:text="多线程"
                 android:textSize="16sp" />
 
+            <Button
+                android:id="@+id/bt_dagger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dagger的使用"
+                android:textSize="16sp" />
+
 
         </LinearLayout>
 
