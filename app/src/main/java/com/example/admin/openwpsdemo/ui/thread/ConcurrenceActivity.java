@@ -11,7 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-//高并发页面
+//高并发多线程页面
 
 public class ConcurrenceActivity extends AppCompatActivity {
 

@@ -14,6 +14,7 @@ import android.widget.Button;
 import com.example.admin.openwpsdemo.LOGUtils;
 import com.example.admin.openwpsdemo.R;
 import com.example.admin.openwpsdemo.ui.dagger.ClothDaggerActivity;
+import com.example.admin.openwpsdemo.ui.daggerTwo.StudentActivity;
 import com.example.admin.openwpsdemo.ui.thread.ConcurrenceActivity;
 import com.example.admin.openwpsdemo.ui.thread.ThreadActivity;
 import com.example.admin.openwpsdemo.utils.Screen;
@@ -232,7 +233,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.bt_dagger:
-                intent = new Intent(this, ClothDaggerActivity.class);
+                intent = new Intent(this, StudentActivity.class);
                 startActivity(intent);
                 break;
 

@@ -9,6 +9,11 @@ import com.example.admin.openwpsdemo.R;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+/**
+ * dagger的使用说明连接: http://blog.izouxiang.cn/2016/10/22/Dagger2%20%E5%85%A5%E9%97%A8/
+ *
+ *  此demo 是按照说明写的
+ */
 public class ClothDaggerActivity extends AppCompatActivity {
 
 

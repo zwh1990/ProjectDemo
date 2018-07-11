@@ -82,6 +82,7 @@
         <activity android:name=".ui.thread.ConcurrenceActivity" />
         <activity android:name=".ui.thread.ThreadActivity" />
         <activity android:name=".ui.dagger.ClothDaggerActivity" />
+        <activity android:name=".ui.daggerTwo.StudentActivity"></activity>
     </application>
 
 </manifest>
