@@ -15,18 +15,18 @@ import dagger.Provides;
 @Module
 public class StudentModule {
 
-//    @Singleton
-//    @Provides
-//    public Student getStudent(){
-//        Student student = new Student();
-//        student.setAge("20");
-//        student.setName("张三");
-//        return student;
-//    }
-//
-//    @Provides
-//    public Person getPerson(Student student){
-//        return new Person(student);
-//    };
+    @Singleton
+    @Provides
+    public Student getStudent(){
+        Student student = new Student();
+        student.setAge("20");
+        student.setName("张三");
+        return student;
+    }
+
+    @Provides
+    public Person getPerson(Student student){
+        return new Person(student);
+    };
 
 }

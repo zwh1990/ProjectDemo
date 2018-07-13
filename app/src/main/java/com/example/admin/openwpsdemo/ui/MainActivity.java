@@ -1,23 +1,31 @@
 package com.example.admin.openwpsdemo.ui;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.storage.StorageManager;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.admin.openwpsdemo.BuildConfig;
 import com.example.admin.openwpsdemo.LOGUtils;
 import com.example.admin.openwpsdemo.R;
-import com.example.admin.openwpsdemo.ui.dagger.ClothDaggerActivity;
 import com.example.admin.openwpsdemo.ui.daggerTwo.StudentActivity;
 import com.example.admin.openwpsdemo.ui.thread.ConcurrenceActivity;
 import com.example.admin.openwpsdemo.ui.thread.ThreadActivity;
+import com.example.admin.openwpsdemo.utils.PermissionUtils;
 import com.example.admin.openwpsdemo.utils.Screen;
+import com.example.admin.openwpsdemo.utils.ToastUtil;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
 import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
@@ -25,6 +33,8 @@ import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionDeniedResponse;
+import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
@@ -32,6 +42,7 @@ import java.io.File;
 import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener,
@@ -59,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Integer pageNumber = 0;
     String pdfFileName;
+    String[] permissions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,30 +84,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         LOGUtils.w(TAG, "px--->" + px);
         LOGUtils.w(TAG, "dp--->" + dp);
 
-        Dexter.withActivity(this)
-                .withPermissions(
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                        Manifest.permission.READ_EXTERNAL_STORAGE,
-                        Manifest.permission.READ_PHONE_STATE,
-                        Manifest.permission.ACCESS_COARSE_LOCATION,
-                        Manifest.permission.ACCESS_FINE_LOCATION
-                )
-                .withListener(new MultiplePermissionsListener() {
+        permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.READ_PHONE_STATE,
+                Manifest.permission.ACCESS_FINE_LOCATION};
 
-                    @Override
-                    public void onPermissionsChecked(MultiplePermissionsReport report) {
-                        Log.w(TAG, "report--->" + report.getDeniedPermissionResponses());
-                    }
+        //申请权限
+        PermissionUtils.initPermissions(this,permissions);
 
-                    @Override
-                    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
-                        Log.w(TAG, "permissions--->" + permissions.toString());
-
-                    }
-                })
-                .check();
     }
 
+    /**
+     * Callback received when a permissions request has been completed.
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+
+        LOGUtils.w(TAG,"permissions--->"+ permissions.toString());
+        PermissionUtils.onRequestPermissionsResult(this,requestCode,grantResults);
+    }
+
+    @SuppressLint("ResourceAsColor")
     private void initView() {
 
         bt_open = findViewById(R.id.bt_open);
@@ -112,10 +122,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_location = findViewById(R.id.bt_location);
         bt_show = findViewById(R.id.bt_show);
         bt_gson = findViewById(R.id.bt_gson);
-        bt_threadLocal =  findViewById(R.id.bt_threadLocal);
+        bt_threadLocal = findViewById(R.id.bt_threadLocal);
         bt_concurrence = findViewById(R.id.bt_concurrence);
         bt_thread = findViewById(R.id.bt_thread);
-        bt_dagger =  findViewById(R.id.bt_dagger);
+        bt_dagger = findViewById(R.id.bt_dagger);
         pdfView = findViewById(R.id.pdfview);
 
 
@@ -208,8 +218,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.bt_show:
-                intent = new Intent(this, ShowActivity.class);
-                startActivity(intent);
+//                intent = new Intent(this, ShowActivity.class);
+//                startActivity(intent);
                 break;
 
             case R.id.bt_gson:

@@ -3,6 +3,7 @@ package com.example.admin.openwpsdemo.ui;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
@@ -21,6 +22,11 @@ public class GaoDeActivity extends AppCompatActivity implements AMapLocationList
 
     AMapLocationClient mlocationClient;
 
+    //显示定位位置
+    TextView tv_location;
+    //测试string布局中plurals的使用
+    TextView tv_plurals;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +37,11 @@ public class GaoDeActivity extends AppCompatActivity implements AMapLocationList
 
     private void initView() {
 
+        tv_plurals = findViewById(R.id.tv_plurals);
+        String quantityString = getResources().getQuantityString(R.plurals.num_locations_reported, 1, 1);
+        tv_plurals.setText(quantityString);
+
+        tv_location = findViewById(R.id.tv_location);
         mlocationClient = new AMapLocationClient(this);
         //初始化定位参数
         mLocationOption = new AMapLocationClientOption();
@@ -67,16 +78,22 @@ public class GaoDeActivity extends AppCompatActivity implements AMapLocationList
                 Date date = new Date(amapLocation.getTime());
                 df.format(date);//定位时间
                 amapLocation.getAddress();//地址，如果option中设置isNeedAddress为false，则没有此结果，网络定位结果中会有地址信息，GPS定位不返回地址信息。
-                amapLocation.getCountry();//国家信息
-                amapLocation.getProvince();//省信息
-                amapLocation.getCity();//城市信息
-                amapLocation.getDistrict();//城区信息
-                amapLocation.getStreet();//街道信息
-                amapLocation.getStreetNum();//街道门牌号信息
+                String country = amapLocation.getCountry();//国家信息
+                String province = amapLocation.getProvince();//省信息
+                String city = amapLocation.getCity();//城市信息
+                String district = amapLocation.getDistrict();//城区信息
+                String street = amapLocation.getStreet();//街道信息
+                String streetNum = amapLocation.getStreetNum();//街道门牌号信息
                 amapLocation.getCityCode();//城市编码
                 amapLocation.getAdCode();//地区编码
 
-                Log.w(TAG,"amapLocation.getCountry() --->" + amapLocation.getCountry());
+                tv_location.setText(country + "\n" +
+                        province + "\n" +
+                        city + "\n" +
+                        district + "\n" +
+                        street + "\n" +
+                        streetNum);
+
             } else {
                 //显示错误信息ErrCode是错误码，errInfo是错误信息，详见错误码表。
                 Log.e("AmapError","location Error, ErrCode:"

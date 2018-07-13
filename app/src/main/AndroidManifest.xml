@@ -76,7 +76,6 @@
         <service android:name="com.amap.api.location.APSService" />
 
         <activity android:name=".ui.PrimaryTypeActivity" />
-        <activity android:name=".ui.ShowActivity" />
         <activity android:name=".ui.GsonActivity" />
         <activity android:name=".ui.ThreadLocalActivity" />
         <activity android:name=".ui.thread.ConcurrenceActivity" />
