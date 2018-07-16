@@ -36,23 +36,23 @@ public class JSONUitl {
     }
 
     private JSONUitl() {
-//        mGson = new Gson();
-        mGson = new GsonBuilder().registerTypeAdapter(GsonBean.class, new TypeAdapter<GsonBean>() {
-            @Override
-            public void write(JsonWriter out, GsonBean value) throws IOException {
-
-            }
-
-            @Override
-            public GsonBean read(JsonReader in) throws IOException {
-                LOGUtils.w(TAG, "in.toString() --->" + in.toString());
-                if (in.peek() == JsonToken.NULL) {
-                    in.nextNull();
-                    return null;
-                }
-                return null;
-            }
-        }).create();
+        mGson = new Gson();
+//        mGson = new GsonBuilder().registerTypeAdapter(GsonBean.class, new TypeAdapter<GsonBean>() {
+//            @Override
+//            public void write(JsonWriter out, GsonBean value) throws IOException {
+//
+//            }
+//
+//            @Override
+//            public GsonBean read(JsonReader in) throws IOException {
+//                LOGUtils.w(TAG, "in.toString() --->" + in.toString());
+//                if (in.peek() == JsonToken.NULL) {
+//                    in.nextNull();
+//                    return null;
+//                }
+//                return null;
+//            }
+//        }).create();
         parser = new JsonParser();
     }
 
