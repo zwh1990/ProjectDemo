@@ -81,7 +81,18 @@
         <activity android:name=".ui.thread.ConcurrenceActivity" />
         <activity android:name=".ui.thread.ThreadActivity" />
         <activity android:name=".ui.dagger.ClothDaggerActivity" />
-        <activity android:name=".ui.daggerTwo.StudentActivity"></activity>
+        <activity android:name=".ui.daggerTwo.StudentActivity" />
+        <activity android:name=".ui.FlexActivity" />
+        <activity
+            android:name=".ui.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".anim.ZoomInActivity" />
+        <activity android:name=".anim.ZoomInDetailActivity" />
+        <activity android:name=".anim.AddViewActivity" />
+        <activity android:name=".anim.ValueAniActivity" />
+        <activity android:name=".ui.SpinerActivity" />
+        <activity android:name=".ui.GlideActivity"></activity>
     </application>
 
 </manifest>

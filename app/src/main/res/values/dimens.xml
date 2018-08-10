@@ -52,11 +52,16 @@
 
     <!-- app字体大小-->
     <dimen name="large">20sp</dimen>
-    <dimen name="textSize_normal">16sp</dimen>
-    <dimen name="textSize_small">14sp</dimen>
-    <dimen name="textSize_xlittle">12sp</dimen>
-    <dimen name="textSize_little">10sp</dimen>
+    <dimen name="normal">16sp</dimen>
+    <dimen name="small">14sp</dimen>
+    <dimen name="xlittle">12sp</dimen>
+    <dimen name="little">10sp</dimen>
     <dimen name="bottom_navigation_height">56dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 
+    <!-- 自定义spinner-->
+    <dimen name="three_grid_unit">12dp</dimen>
+    <dimen name="one_and_a_half_grid_unit">6dp</dimen>
 
 </resources>

@@ -48,7 +48,7 @@
         android:layout_marginLeft="@dimen/margin_10"
         android:layout_marginRight="@dimen/margin_10"
         android:text="退出"
-        android:textSize="@dimen/textSize_normal"
+        android:textSize="@dimen/normal"
         android:layout_marginBottom="@dimen/margin_10"
         />
 

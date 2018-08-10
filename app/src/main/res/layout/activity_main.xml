@@ -130,6 +130,50 @@
                 android:text="dagger的使用"
                 android:textSize="16sp" />
 
+            <Button
+                android:id="@+id/bt_flex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="伸缩页面"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_zoom_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片缩放页面"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_add_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加view动画"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="差值动画"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_spiner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="spiner样式"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/bt_glide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="glide 加载图片"
+                android:textSize="16sp" />
+
+
 
         </LinearLayout>
 

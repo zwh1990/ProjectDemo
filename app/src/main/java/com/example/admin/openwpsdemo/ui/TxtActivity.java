@@ -48,6 +48,31 @@ public class TxtActivity extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
 
+        //开启线程下载文件
+//        newThreadLoadText();
+
+        //读取本地文件
+        try {
+            readLocalText();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void readLocalText() throws IOException {
+//        final String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/text.txt";
+        final String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/test.docx";
+//        InputStream assetsInputStream = Utility.getAssetsInputStream(this, "text.txt");
+        superView.post(new Runnable() {
+            @Override
+            public void run() {
+                superView.displayFile(new File(path));
+            }
+        });
+    }
+
+    private void newThreadLoadText() {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -58,9 +83,6 @@ public class TxtActivity extends AppCompatActivity implements View.OnClickListen
                 }
             }
         }).start();
-
-//        String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/test.txt";
-
     }
 
     private void downLoadDoc() throws IOException {

@@ -20,6 +20,9 @@ import android.widget.Button;
 import com.example.admin.openwpsdemo.BuildConfig;
 import com.example.admin.openwpsdemo.LOGUtils;
 import com.example.admin.openwpsdemo.R;
+import com.example.admin.openwpsdemo.anim.AddViewActivity;
+import com.example.admin.openwpsdemo.anim.ValueAniActivity;
+import com.example.admin.openwpsdemo.anim.ZoomInActivity;
 import com.example.admin.openwpsdemo.ui.daggerTwo.StudentActivity;
 import com.example.admin.openwpsdemo.ui.thread.ConcurrenceActivity;
 import com.example.admin.openwpsdemo.ui.thread.ThreadActivity;
@@ -66,6 +69,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_concurrence;
     private Button bt_thread;
     private Button bt_dagger;
+    private Button bt_flex;
+    private Button bt_zoom_in;
+    private Button bt_add_view;
+    private Button bt_value;
+    private Button bt_spiner;
+    private Button bt_glide;
     private PDFView pdfView;
 
     Integer pageNumber = 0;
@@ -90,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Manifest.permission.ACCESS_FINE_LOCATION};
 
         //申请权限
-        PermissionUtils.initPermissions(this,permissions);
+        PermissionUtils.initPermissions(this, permissions);
 
     }
 
@@ -101,8 +110,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
 
-        LOGUtils.w(TAG,"permissions--->"+ permissions.toString());
-        PermissionUtils.onRequestPermissionsResult(this,requestCode,grantResults);
+        LOGUtils.w(TAG, "permissions--->" + permissions.toString());
+        PermissionUtils.onRequestPermissionsResult(this, requestCode, grantResults);
     }
 
     @SuppressLint("ResourceAsColor")
@@ -126,6 +135,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_concurrence = findViewById(R.id.bt_concurrence);
         bt_thread = findViewById(R.id.bt_thread);
         bt_dagger = findViewById(R.id.bt_dagger);
+        bt_flex = findViewById(R.id.bt_flex);
+        bt_zoom_in = findViewById(R.id.bt_zoom_in);
+        bt_add_view = findViewById(R.id.bt_add_view);
+        bt_value = findViewById(R.id.bt_value);
+        bt_spiner = findViewById(R.id.bt_spiner);
+        bt_glide = findViewById(R.id.bt_glide);
         pdfView = findViewById(R.id.pdfview);
 
 
@@ -145,6 +160,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_concurrence.setOnClickListener(this);
         bt_thread.setOnClickListener(this);
         bt_dagger.setOnClickListener(this);
+        bt_flex.setOnClickListener(this);
+        bt_zoom_in.setOnClickListener(this);
+        bt_add_view.setOnClickListener(this);
+        bt_value.setOnClickListener(this);
+        bt_spiner.setOnClickListener(this);
+        bt_glide.setOnClickListener(this);
 
     }
 
@@ -244,6 +265,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bt_dagger:
                 intent = new Intent(this, StudentActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_flex:
+                intent = new Intent(this, FlexActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_zoom_in:
+                intent = new Intent(this, ZoomInActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_add_view:
+                intent = new Intent(this, AddViewActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_value:
+                intent = new Intent(this, ValueAniActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_spiner:
+                intent = new Intent(this, SpinerActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_glide:
+                intent = new Intent(this, GlideActivity.class);
                 startActivity(intent);
                 break;
 

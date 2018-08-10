@@ -10,6 +10,14 @@
         android:layout_height="wrap_content"
         android:text="下载并打开文件"/>
 
+    <Button
+        android:id="@+id/bt_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下载并打开文件"/>
+
+
+
     <com.example.admin.openwpsdemo.SuperFileView
         android:id="@+id/superView"
         android:layout_width="match_parent"

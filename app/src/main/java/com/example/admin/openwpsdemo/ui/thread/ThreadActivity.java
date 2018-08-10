@@ -107,4 +107,12 @@ public class ThreadActivity extends AppCompatActivity {
         }
     }
 
+    class TestThread extends Thread{
+
+        @Override
+        public void run() {
+            super.run();
+        }
+    }
+
 }

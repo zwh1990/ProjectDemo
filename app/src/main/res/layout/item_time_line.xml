@@ -7,6 +7,29 @@
     android:layout_marginRight="10dp"
     android:orientation="horizontal">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:10:10"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-08-03"
+            android:textColor="@color/black"/>
+
+
+
+    </LinearLayout>
+
     <com.example.admin.openwpsdemo.weight.TimelineView
         android:id="@+id/time_marker"
         android:layout_width="wrap_content"

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".anim.ValueAniActivity">
+
+    <Button
+        android:id="@+id/bt_begin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始差值动画" />
+
+    <Button
+        android:id="@+id/bt_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_begin"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="结束差值动画" />
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_end"
+        android:text="view"
+        />
+
+
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:src="@drawable/circle"/>
+
+</RelativeLayout>
