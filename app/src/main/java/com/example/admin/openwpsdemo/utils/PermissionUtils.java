@@ -43,8 +43,7 @@ public class PermissionUtils {
             //只要有一个没有申请的就需要再次提醒用户
             if (permissionState == PackageManager.PERMISSION_DENIED) {
                 return false;
-            }
-            ;
+            };
         }
         return true;
     }

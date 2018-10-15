@@ -64,4 +64,9 @@
     <dimen name="three_grid_unit">12dp</dimen>
     <dimen name="one_and_a_half_grid_unit">6dp</dimen>
 
+    <!-- 自定义fablayout -->
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="tb_button_margin">16dp</dimen>
+    <dimen name="elevation">16dp</dimen>
+
 </resources>

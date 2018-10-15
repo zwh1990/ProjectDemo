@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".anim.ValueAniActivity">
+    tools:context=".anim.ValueAniActivity"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:id="@+id/ll_value"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/bt_begin"
@@ -15,7 +24,6 @@
         android:id="@+id/bt_end"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/bt_begin"
         android:layout_marginTop="@dimen/margin_10"
         android:text="结束差值动画" />
 
@@ -37,4 +45,4 @@
         android:layout_marginBottom="@dimen/margin_10"
         android:src="@drawable/circle"/>
 
-</RelativeLayout>
+</LinearLayout>

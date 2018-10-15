@@ -92,7 +92,24 @@
         <activity android:name=".anim.AddViewActivity" />
         <activity android:name=".anim.ValueAniActivity" />
         <activity android:name=".ui.SpinerActivity" />
-        <activity android:name=".ui.GlideActivity"></activity>
+        <activity android:name=".ui.GlideActivity" />
+        <activity android:name=".ui.SplitActivity" />
+        <activity android:name=".ui.EditActivity" />
+        <activity android:name=".ui.FabActivity" />
+        <activity android:name=".ui.RegularActivity" />
+        <activity android:name=".ui.WaterActivity" />
+
+        <meta-data
+            android:name="com.example.admin.openwpsdemo.glide.GlideConfigModule"
+            android:value="GlideModule" />
+
+        <activity android:name=".ui.ImagePropertyActivity" />
+        <activity android:name=".ui.BaiduMapActivity" />
+        <activity
+            android:name=".ui.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.TabLayoutActivity"></activity>
     </application>
 
 </manifest>

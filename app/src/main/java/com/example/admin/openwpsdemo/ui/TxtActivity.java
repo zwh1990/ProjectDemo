@@ -16,6 +16,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class TxtActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -49,14 +52,14 @@ public class TxtActivity extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
 
         //开启线程下载文件
-//        newThreadLoadText();
+        newThreadLoadText();
 
         //读取本地文件
-        try {
-            readLocalText();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            readLocalText();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
     }
 
@@ -86,13 +89,22 @@ public class TxtActivity extends AppCompatActivity implements View.OnClickListen
     }
 
     private void downLoadDoc() throws IOException {
-        download("http://192.168.1.101:8081/zh_hczz/api/zcqk/downfile.htm");
+//        download("http://192.168.1.101:8081/zh_hczz/api/zcqk/downfile.htm");
+        download("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535971357471&di=40ab329c05e12bd65fd530b70cfd6765&imgtype=0&src=http%3A%2F%2Fpic23.photophoto.cn%2F20120503%2F0034034456597026_b.jpg");
     }
 
     public void download(String url) throws IOException {
         URL urlGet = new URL(url);
         HttpURLConnection conn = (HttpURLConnection) urlGet.openConnection();
         InputStream inputStream = conn.getInputStream();
+        Map<String, List<String>> headerFields = conn.getHeaderFields();
+        LOGUtils.w(TAG,"headerFields--->" + headerFields.size());
+        Set<Map.Entry<String, List<String>>> entries = headerFields.entrySet();
+        for (Map.Entry<String, List<String>> e : entries) {
+            System.out.println("key：" + e.getKey() + " value:"
+                    + e.getValue());
+
+        }
         String headerField = conn.getHeaderField("Content-Disposition");
         LOGUtils.w(TAG,"headerField--->" + headerField);
         String[] split = headerField.split("=");

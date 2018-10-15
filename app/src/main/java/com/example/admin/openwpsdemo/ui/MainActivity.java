@@ -75,6 +75,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_value;
     private Button bt_spiner;
     private Button bt_glide;
+    private Button bt_split;
+    private Button bt_edit;
+    private Button bt_fab;
+    private Button bt_regular;
+    private Button bt_water;
+    private Button bt_imageProperty;
+    private Button bt_map;
+    private Button bt_tabs;
     private PDFView pdfView;
 
     Integer pageNumber = 0;
@@ -141,6 +149,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_value = findViewById(R.id.bt_value);
         bt_spiner = findViewById(R.id.bt_spiner);
         bt_glide = findViewById(R.id.bt_glide);
+        bt_split = findViewById(R.id.bt_split);
+        bt_edit = findViewById(R.id.bt_edit);
+        bt_fab = findViewById(R.id.bt_fab);
+        bt_regular = findViewById(R.id.bt_regular);
+        bt_water = findViewById(R.id.bt_water);
+        bt_imageProperty = findViewById(R.id.bt_imageProperty);
+        bt_map = findViewById(R.id.bt_map);
+        bt_tabs = findViewById(R.id.bt_tabs);
         pdfView = findViewById(R.id.pdfview);
 
 
@@ -166,6 +182,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_value.setOnClickListener(this);
         bt_spiner.setOnClickListener(this);
         bt_glide.setOnClickListener(this);
+        bt_split.setOnClickListener(this);
+        bt_edit.setOnClickListener(this);
+        bt_fab.setOnClickListener(this);
+        bt_regular.setOnClickListener(this);
+        bt_water.setOnClickListener(this);
+        bt_imageProperty.setOnClickListener(this);
+        bt_map.setOnClickListener(this);
+        bt_tabs.setOnClickListener(this);
 
     }
 
@@ -295,6 +319,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bt_glide:
                 intent = new Intent(this, GlideActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_split:
+                intent = new Intent(this, SplitActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_edit:
+                intent = new Intent(this, EditActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_fab:
+                intent = new Intent(this, FabActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_regular:
+                intent = new Intent(this, RegularActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_water:
+                intent = new Intent(this, WaterActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_imageProperty:
+                intent = new Intent(this, ImagePropertyActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_map:
+                intent = new Intent(this, BaiduMapActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_tabs:
+                intent = new Intent(this, TabLayoutActivity.class);
                 startActivity(intent);
                 break;
 
