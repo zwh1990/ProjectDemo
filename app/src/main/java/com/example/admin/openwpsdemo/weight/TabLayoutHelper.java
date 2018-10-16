@@ -83,7 +83,7 @@ public class TabLayoutHelper {
                         tab.setCustomView(R.layout.item_tab_view);
                         if (tab.getCustomView() == null) return;
                         View customView = tab.getCustomView();
-                        TextView textView = (TextView) customView.findViewById(R.id.tv_tab);
+                        TextView textView = customView.findViewById(R.id.tv_tab);
                         textView.setText(text);
                         if(builder.getNormalBackgroundColor()!=0){
                             textView.setBackgroundColor(builder.getNormalBackgroundColor());

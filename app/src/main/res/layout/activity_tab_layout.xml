@@ -7,13 +7,19 @@
     android:orientation="vertical"
     tools:context=".ui.TabLayoutActivity">
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tabs"
+
+    <com.example.admin.openwpsdemo.weight.tablayout.TabLayout
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabIndicatorColor="@color/colorAccent"
-        app:tabSelectedTextColor="@color/colorAccent"
-        app:tabTextColor="@color/colorAccent" />
+        android:layout_height="48dp"
+        android:text="Hello World!"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="5dp"
+        app:tabIndicatorColor="#fd676f"
+        app:tabLineOffset="30dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="#fd676f"
+        app:tabTextColor="#fd676f" />
 
 
     <android.support.v4.view.ViewPager
