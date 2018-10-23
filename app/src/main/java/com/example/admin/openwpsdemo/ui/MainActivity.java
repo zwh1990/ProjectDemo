@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_imageProperty;
     private Button bt_map;
     private Button bt_tabs;
+    private Button bt_bottom_sheet;
     private PDFView pdfView;
 
     Integer pageNumber = 0;
@@ -157,6 +158,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_imageProperty = findViewById(R.id.bt_imageProperty);
         bt_map = findViewById(R.id.bt_map);
         bt_tabs = findViewById(R.id.bt_tabs);
+        bt_bottom_sheet = findViewById(R.id.bt_bottom_sheet);
         pdfView = findViewById(R.id.pdfview);
 
 
@@ -190,6 +192,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_imageProperty.setOnClickListener(this);
         bt_map.setOnClickListener(this);
         bt_tabs.setOnClickListener(this);
+        bt_bottom_sheet.setOnClickListener(this);
 
     }
 
@@ -359,6 +362,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bt_tabs:
                 intent = new Intent(this, TabLayoutActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_bottom_sheet:
+                intent = new Intent(this, BottomSheetActivity.class);
                 startActivity(intent);
                 break;
 

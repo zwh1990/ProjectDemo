@@ -38,30 +38,34 @@ public class TabLayoutActivity extends AppCompatActivity {
         mAdapter.addFragment(TabLayoutFragment.newInstance());
         mAdapter.addFragment(TabLayoutFragment.newInstance());
         mAdapter.addFragment(TabLayoutFragment.newInstance());
+        mAdapter.addFragment(TabLayoutFragment.newInstance());
+        mAdapter.addFragment(TabLayoutFragment.newInstance());
 
 
         mViewPager.setAdapter(mAdapter);//给ViewPager设置适配器
         mTabLayout.setupWithViewPager(mViewPager);//将TabLayout和ViewPager关联起来。
-        mTabLayout.removeAllTabs();
+//        mTabLayout.removeAllTabs();
+//
+//        for (int i = 0; i < 3; i++) {
+//            View view = LayoutInflater.from(this).inflate(R.layout.item_skill_tab, null, false);
+//            TextView tvName = view.findViewById(R.id.tv_name);
+//            tvName.setText("郭果果" + i);
+//            TabLayout.Tab tab = mTabLayout.newTab().setCustomView(view);
+//            //设置第一个默认选中Tab
+//            if (i == 0) {
+//                mTabLayout.addTab(tab, true);
+//            } else {
+//                mTabLayout.addTab(tab);
+//            }
+//        }
 
-        for (int i = 0; i < 3; i++) {
-            View view = LayoutInflater.from(this).inflate(R.layout.item_skill_tab, null, false);
-            TextView tvName = view.findViewById(R.id.tv_name);
-            tvName.setText("郭果果" + i);
-            TabLayout.Tab tab = mTabLayout.newTab().setCustomView(view);
-            //设置第一个默认选中Tab
-            if (i == 0) {
-                mTabLayout.addTab(tab, true);
-            } else {
-                mTabLayout.addTab(tab);
-            }
-        }
+        mTabLayout.getTabAt(0).setText("郭果果");
+        mTabLayout.getTabAt(1).setText("郭果果");
+        mTabLayout.getTabAt(2).setText("郭果果");
+        mTabLayout.getTabAt(3).setText("郭果果");
+        mTabLayout.getTabAt(4).setText("郭果果");
 
-//        mTabLayout.getTabAt(0).setText("郭果果");
-//        mTabLayout.getTabAt(1).setText("郭果果");
-//        mTabLayout.getTabAt(2).setText("郭果果");
-
-//        mViewPager.setOffscreenPageLimit(3);
+        mViewPager.setOffscreenPageLimit(3);
 
     }
 

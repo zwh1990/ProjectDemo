@@ -105,11 +105,11 @@
 
         <activity android:name=".ui.ImagePropertyActivity" />
         <activity android:name=".ui.BaiduMapActivity" />
-        <activity
-            android:name=".ui.Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.TabLayoutActivity"></activity>
+        <activity android:name=".ui.TabLayoutActivity" />
+        <activity android:name=".ui.TemplateActivity" />
+        <activity android:name=".TemplateActivity" />
+        <activity android:name=".Template4Activity" />
+        <activity android:name=".ui.BottomSheetActivity"></activity>
     </application>
 
 </manifest>

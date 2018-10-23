@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.admin.openwpsdemo.LOGUtils;
 import com.example.admin.openwpsdemo.R;
 
 /**
@@ -16,6 +17,8 @@ import com.example.admin.openwpsdemo.R;
  */
 public class TabLayoutFragment extends Fragment {
 
+
+    private static final String TAG = TabLayoutFragment.class.getSimpleName() ;
 
     public TabLayoutFragment() {
         // Required empty public constructor
@@ -43,7 +46,11 @@ public class TabLayoutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+        LOGUtils.w(TAG,"onCreateView--->");
         return inflater.inflate(R.layout.fragment_tab_layout, container, false);
     }
+
+
 
 }
