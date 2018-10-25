@@ -237,6 +237,20 @@
                 android:text="BottomSheet的使用"
                 android:textSize="16sp" />
 
+            <Button
+                android:id="@+id/bt_bottom_sheet_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BottomSheetDialog的使用"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_scroll_appBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ScrollAppBar的使用"
+                android:textSize="16sp" />
+
         </LinearLayout>
 
 

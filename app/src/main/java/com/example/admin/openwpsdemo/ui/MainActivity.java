@@ -11,6 +11,7 @@ import android.os.Environment;
 import android.os.storage.StorageManager;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -84,6 +85,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_map;
     private Button bt_tabs;
     private Button bt_bottom_sheet;
+    private Button bt_bottom_sheet_dialog;
+    private Button bt_scroll_appBar;
     private PDFView pdfView;
 
     Integer pageNumber = 0;
@@ -159,6 +162,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_map = findViewById(R.id.bt_map);
         bt_tabs = findViewById(R.id.bt_tabs);
         bt_bottom_sheet = findViewById(R.id.bt_bottom_sheet);
+        bt_bottom_sheet_dialog = findViewById(R.id.bt_bottom_sheet_dialog);
+        bt_scroll_appBar = findViewById(R.id.bt_scroll_appBar);
         pdfView = findViewById(R.id.pdfview);
 
 
@@ -193,6 +198,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_map.setOnClickListener(this);
         bt_tabs.setOnClickListener(this);
         bt_bottom_sheet.setOnClickListener(this);
+        bt_bottom_sheet_dialog.setOnClickListener(this);
+        bt_scroll_appBar.setOnClickListener(this);
 
     }
 
@@ -367,6 +374,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bt_bottom_sheet:
                 intent = new Intent(this, BottomSheetActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_bottom_sheet_dialog:
+                intent = new Intent(this, BottomSheetDialogActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_scroll_appBar:
+                intent = new Intent(this, ScrollingActivity.class);
                 startActivity(intent);
                 break;
 

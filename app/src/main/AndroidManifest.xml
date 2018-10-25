@@ -109,7 +109,8 @@
         <activity android:name=".ui.TemplateActivity" />
         <activity android:name=".TemplateActivity" />
         <activity android:name=".Template4Activity" />
-        <activity android:name=".ui.BottomSheetActivity"></activity>
+        <activity android:name=".ui.BottomSheetActivity" />
+        <activity android:name=".ui.BottomSheetDialogActivity"></activity>
     </application>
 
 </manifest>
