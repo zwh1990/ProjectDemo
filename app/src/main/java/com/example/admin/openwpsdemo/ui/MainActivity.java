@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_bottom_sheet;
     private Button bt_bottom_sheet_dialog;
     private Button bt_scroll_appBar;
+    private Button bt_auto_vp;
     private PDFView pdfView;
 
     Integer pageNumber = 0;
@@ -164,6 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_bottom_sheet = findViewById(R.id.bt_bottom_sheet);
         bt_bottom_sheet_dialog = findViewById(R.id.bt_bottom_sheet_dialog);
         bt_scroll_appBar = findViewById(R.id.bt_scroll_appBar);
+        bt_auto_vp = findViewById(R.id.bt_auto_vp);
         pdfView = findViewById(R.id.pdfview);
 
 
@@ -200,6 +202,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_bottom_sheet.setOnClickListener(this);
         bt_bottom_sheet_dialog.setOnClickListener(this);
         bt_scroll_appBar.setOnClickListener(this);
+        bt_auto_vp.setOnClickListener(this);
 
     }
 
@@ -384,6 +387,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bt_scroll_appBar:
                 intent = new Intent(this, ScrollingActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_auto_vp:
+                intent = new Intent(this, AutoVPActivity.class);
                 startActivity(intent);
                 break;
 

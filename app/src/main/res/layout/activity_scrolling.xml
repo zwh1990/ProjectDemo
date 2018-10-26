@@ -34,8 +34,8 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
                 android:theme="@style/AppBarTheme"
+                app:layout_collapseMode="pin"
                 app:navigationIcon="@drawable/navigation_back_white"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
@@ -57,6 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
         app:srcCompat="@android:drawable/ic_dialog_email" />

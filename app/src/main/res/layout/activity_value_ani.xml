@@ -43,6 +43,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/margin_10"
-        android:src="@drawable/circle"/>
+        android:src="@drawable/circle_red"/>
 
 </LinearLayout>

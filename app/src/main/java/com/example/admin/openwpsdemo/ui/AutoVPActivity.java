@@ -1,13 +1,7 @@
 package com.example.admin.openwpsdemo.ui;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -16,16 +10,10 @@ import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
 import com.bumptech.glide.Glide;
 import com.example.admin.openwpsdemo.R;
-import com.example.admin.openwpsdemo.adapter.RecAdapter;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
-public class ScrollingActivity extends AppCompatActivity {
-
-    private RecyclerView rc;
-    private AppBarLayout appBarLayout;
-    private CollapsingToolbarLayout collapsingToolbarLayout;
+public class AutoVPActivity extends AppCompatActivity {
 
     private ConvenientBanner mConvenientBanner;
 
@@ -40,38 +28,15 @@ public class ScrollingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scrolling);
-
-        final Toolbar toolbar = findViewById(R.id.toolbar);
-        appBarLayout = findViewById(R.id.app_bar);
-        collapsingToolbarLayout = findViewById(R.id.toolbar_layout);
-        mConvenientBanner = findViewById(R.id.banner);
-        setSupportActionBar(toolbar);
-
-        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-            @Override
-            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
-                    toolbar.setTitleTextColor(getResources().getColor(R.color.white));
-                    collapsingToolbarLayout.setTitle("AppbarLayout");
-                } else {
-                    collapsingToolbarLayout.setTitle("");
-                }
-            }
-        });
+        setContentView(R.layout.activity_auto_vp);
 
         initView();
+
     }
 
     private void initView() {
 
-        rc = findViewById(R.id.rc);
-
-        RecAdapter recAdapter = new RecAdapter(this, new ArrayList<String>());
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-
-        rc.setLayoutManager(linearLayoutManager);
-        rc.setAdapter(recAdapter);
+        mConvenientBanner = findViewById(R.id.banner);
 
         mConvenientBanner.setPages(
                 new CBViewHolderCreator() {
@@ -90,6 +55,7 @@ public class ScrollingActivity extends AppCompatActivity {
                 .setPointViewVisible(true)
                 //设置指示器的方向
                 .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.ALIGN_PARENT_RIGHT);
+
     }
 
     @Override
@@ -119,7 +85,7 @@ public class ScrollingActivity extends AppCompatActivity {
 
         @Override
         public void updateUI(String data) {
-            Glide.with(ScrollingActivity.this)
+            Glide.with(AutoVPActivity.this)
                     .load(data)
                     .into(imageView);
         }

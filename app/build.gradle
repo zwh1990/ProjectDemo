@@ -62,6 +62,6 @@ dependencies {
         all*.exclude group: 'com.android.support', module: 'support-v13'
     }
 
-    implementation 'com.bigkoo:convenientbanner:2.0.0'//banner
+    implementation 'com.bigkoo:ConvenientBanner:2.1.4'//地址变ConvenientBanner 大写了，额。。。
 
 }
