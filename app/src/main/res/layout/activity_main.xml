@@ -258,6 +258,57 @@
                 android:text="viewPager自动轮播"
                 android:textSize="16sp" />
 
+
+            <Button
+                android:id="@+id/bt_capture_userInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取用户信息"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_data_binding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dataBinding的使用"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_GPS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试该手机GPS卫星信号强弱"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_pick_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试微勘项目时间选取"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/bt_zxing_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="zxing扫描"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="进度条"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_list_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="列表刷新"
+                android:textSize="16sp" />
+
         </LinearLayout>
 
 

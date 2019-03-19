@@ -25,6 +25,7 @@ import com.example.admin.openwpsdemo.anim.AddViewActivity;
 import com.example.admin.openwpsdemo.anim.ValueAniActivity;
 import com.example.admin.openwpsdemo.anim.ZoomInActivity;
 import com.example.admin.openwpsdemo.ui.daggerTwo.StudentActivity;
+import com.example.admin.openwpsdemo.ui.databinding.DataBindingActivity;
 import com.example.admin.openwpsdemo.ui.thread.ConcurrenceActivity;
 import com.example.admin.openwpsdemo.ui.thread.ThreadActivity;
 import com.example.admin.openwpsdemo.utils.PermissionUtils;
@@ -88,6 +89,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_bottom_sheet_dialog;
     private Button bt_scroll_appBar;
     private Button bt_auto_vp;
+    private Button bt_capture_userInfo;
+    private Button bt_data_binding;
+    private Button bt_GPS;
+    private Button bt_pick_time;
+    private Button bt_zxing_scan;
+    private Button bt_progressBar;
+    private Button bt_list_refresh;
     private PDFView pdfView;
 
     Integer pageNumber = 0;
@@ -99,8 +107,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initView();
-
         int px = Screen.sp2px(this, 1);
         int dp = Screen.dp2px(this, 1);
         LOGUtils.w(TAG, "px--->" + px);
@@ -109,10 +115,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.READ_PHONE_STATE,
-                Manifest.permission.ACCESS_FINE_LOCATION};
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.READ_CONTACTS,
+                Manifest.permission.WRITE_CONTACTS,
+                Manifest.permission.CAMERA};
 
         //申请权限
         PermissionUtils.initPermissions(this, permissions);
+
+        initView();
 
     }
 
@@ -129,6 +140,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @SuppressLint("ResourceAsColor")
     private void initView() {
+
+        LOGUtils.initLog();
 
         bt_open = findViewById(R.id.bt_open);
         bt_open.setBackgroundColor(R.color.white);
@@ -166,6 +179,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_bottom_sheet_dialog = findViewById(R.id.bt_bottom_sheet_dialog);
         bt_scroll_appBar = findViewById(R.id.bt_scroll_appBar);
         bt_auto_vp = findViewById(R.id.bt_auto_vp);
+        bt_capture_userInfo = findViewById(R.id.bt_capture_userInfo);
+        bt_data_binding = findViewById(R.id.bt_data_binding);
+        bt_GPS = findViewById(R.id.bt_GPS);
+        bt_pick_time = findViewById(R.id.bt_pick_time);
+        bt_zxing_scan = findViewById(R.id.bt_zxing_scan);
+        bt_progressBar = findViewById(R.id.bt_progressBar);
+        bt_list_refresh = findViewById(R.id.bt_list_refresh);
         pdfView = findViewById(R.id.pdfview);
 
 
@@ -203,6 +223,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_bottom_sheet_dialog.setOnClickListener(this);
         bt_scroll_appBar.setOnClickListener(this);
         bt_auto_vp.setOnClickListener(this);
+        bt_capture_userInfo.setOnClickListener(this);
+        bt_data_binding.setOnClickListener(this);
+        bt_GPS.setOnClickListener(this);
+        bt_pick_time.setOnClickListener(this);
+        bt_zxing_scan.setOnClickListener(this);
+        bt_progressBar.setOnClickListener(this);
+        bt_list_refresh.setOnClickListener(this);
 
     }
 
@@ -392,6 +419,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bt_auto_vp:
                 intent = new Intent(this, AutoVPActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_capture_userInfo:
+                intent = new Intent(this, UserInfoActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_data_binding:
+                intent = new Intent(this, DataBindingActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_GPS:
+                intent = new Intent(this, GpsActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_pick_time:
+                intent = new Intent(this, PickTimeActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_zxing_scan:
+                intent = new Intent(this, ZXingActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_progressBar:
+                intent = new Intent(this, ProgressBarActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_list_refresh:
+                intent = new Intent(this, ListRefreshActivity.class);
                 startActivity(intent);
                 break;
 

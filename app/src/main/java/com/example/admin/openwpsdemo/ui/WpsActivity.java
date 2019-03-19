@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.admin.openwpsdemo.R;
@@ -20,7 +21,7 @@ import java.util.List;
 public class WpsActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static final String TAG = WpsActivity.class.getSimpleName();
-//    private Button bt_wps;
+    private Button bt_wps;
     private boolean isInstall;
 
     private StringBuffer sb;
@@ -34,14 +35,14 @@ public class WpsActivity extends AppCompatActivity implements View.OnClickListen
     }
 
     private void initView() {
-//        bt_wps = findViewById(R.id.bt_wps);
-//        bt_wps.setOnClickListener(this);
+        bt_wps = findViewById(R.id.bt_wps);
+        bt_wps.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
 
-        String path = Environment.getExternalStorageDirectory().getPath() + "/test.docx";
+        String path = Environment.getExternalStorageDirectory().getPath() + "/PDF2.pdf";
         if(isInstall()){
             openFile(path);
         }else {

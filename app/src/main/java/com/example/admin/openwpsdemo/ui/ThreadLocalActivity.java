@@ -25,14 +25,14 @@ public class ThreadLocalActivity extends AppCompatActivity {
         tC.start();
     }
 
-    class ThreadDemo implements  Runnable{
+    class ThreadDemo implements Runnable {
 
         @Override
         public void run() {
             // 线程的id是在它第一次run的时候才分配的，它run，它请求分配id，系统给它一个id
             UniqueThreadIdGenerator uniqueThreadIdGenerator = new UniqueThreadIdGenerator();
             int id = uniqueThreadIdGenerator.getCurrentThreadId();
-            LOGUtils.w(TAG,Thread.currentThread().getName() + " is running, its ID is: " + id);
+            LOGUtils.w(TAG, Thread.currentThread().getName() + " is running, its ID is: " + id);
         }
     }
 
@@ -41,7 +41,7 @@ public class ThreadLocalActivity extends AppCompatActivity {
 
         private AtomicInteger uniqueId = new AtomicInteger(0);
 
-        private  ThreadLocal<Integer> uniqueNum = new ThreadLocal<Integer>() {
+        private ThreadLocal<Integer> uniqueNum = new ThreadLocal<Integer>() {
             @Override
             // 如果当前线程是第一次请求id的分配则给它赋一个初始值
             protected Integer initialValue() {
@@ -50,12 +50,12 @@ public class ThreadLocalActivity extends AppCompatActivity {
         };
 
         // 给当前线程返回它的id
-        public  int getCurrentThreadId() {
+        public int getCurrentThreadId() {
             return uniqueNum.get();
         }
 
         // 设置当前线程的id
-        public  void setCurrentThreadId(int id) {
+        public void setCurrentThreadId(int id) {
             uniqueNum.set(id);
         }
 

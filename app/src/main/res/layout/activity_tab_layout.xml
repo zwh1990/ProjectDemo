@@ -8,18 +8,14 @@
     tools:context=".ui.TabLayoutActivity">
 
 
-    <com.example.admin.openwpsdemo.weight.tablayout.TabLayout
-        android:id="@+id/tab_layout"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="Hello World!"
-        app:tabGravity="fill"
-        app:tabIndicatorHeight="5dp"
-        app:tabIndicatorColor="#fd676f"
-        app:tabLineOffset="30dp"
-        app:tabMode="fixed"
-        app:tabSelectedTextColor="#fd676f"
-        app:tabTextColor="#fd676f" />
+        android:layout_height="@dimen/margin_40"
+        app:tabBackground="@drawable/tab_seletor"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/pieFifteen"
+        app:tabTextColor="@color/black" />
 
 
     <android.support.v4.view.ViewPager

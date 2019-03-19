@@ -16,7 +16,7 @@ import java.util.Date;
  */
 
 public class LOGUtils {
-    public static  final boolean LOG_DEBUG = false/*APPConfig.DEBUG*/;
+    public static  final boolean LOG_DEBUG = true/*APPConfig.DEBUG*/;
     private  static String tag = "# JZDLog #";
     private final static String logFileName = "jzd.log";
     private  static String logPath = "";

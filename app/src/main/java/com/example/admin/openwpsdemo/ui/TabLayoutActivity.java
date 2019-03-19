@@ -1,18 +1,18 @@
 package com.example.admin.openwpsdemo.ui;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.TextView;
 
+
+import com.example.admin.openwpsdemo.LOGUtils;
 import com.example.admin.openwpsdemo.R;
 import com.example.admin.openwpsdemo.adapter.ControlDetailPagerAdapter;
-import com.example.admin.openwpsdemo.weight.tablayout.TabLayout;
 
 public class TabLayoutActivity extends AppCompatActivity {
 
+    private static final String TAG = TabLayoutActivity.class.getSimpleName();
     TabLayout mTabLayout;
     ViewPager mViewPager;
 
@@ -28,7 +28,12 @@ public class TabLayoutActivity extends AppCompatActivity {
 
     private void initView() {
 
-        mTabLayout = findViewById(R.id.tab_layout);
+        String s1 = "123";
+        String s2 = null;
+        boolean b = s1.equals(s2);
+        LOGUtils.w(TAG,"b--->" + b);
+
+        mTabLayout = findViewById(R.id.tabs);
         mViewPager = findViewById(R.id.vp_view);
 
 
@@ -44,20 +49,6 @@ public class TabLayoutActivity extends AppCompatActivity {
 
         mViewPager.setAdapter(mAdapter);//给ViewPager设置适配器
         mTabLayout.setupWithViewPager(mViewPager);//将TabLayout和ViewPager关联起来。
-//        mTabLayout.removeAllTabs();
-//
-//        for (int i = 0; i < 3; i++) {
-//            View view = LayoutInflater.from(this).inflate(R.layout.item_skill_tab, null, false);
-//            TextView tvName = view.findViewById(R.id.tv_name);
-//            tvName.setText("郭果果" + i);
-//            TabLayout.Tab tab = mTabLayout.newTab().setCustomView(view);
-//            //设置第一个默认选中Tab
-//            if (i == 0) {
-//                mTabLayout.addTab(tab, true);
-//            } else {
-//                mTabLayout.addTab(tab);
-//            }
-//        }
 
         mTabLayout.getTabAt(0).setText("郭果果");
         mTabLayout.getTabAt(1).setText("郭果果");

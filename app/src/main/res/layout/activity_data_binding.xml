@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="user"
+            type="com.example.admin.openwpsdemo.biz.User" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.admin.openwpsdemo.ui.databinding.DataBindingActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="@{user.name}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="@{user.age}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal" />
+
+        <include layout="@layout/data_bind_include"
+            bind:user = "@{user}"></include>
+
+    </LinearLayout>
+
+</layout>

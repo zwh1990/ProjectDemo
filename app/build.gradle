@@ -18,13 +18,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:25.3.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:support-v4:25.3.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
@@ -34,34 +38,35 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.android.support:cardview-v7:25.3.1'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
     implementation 'com.google.android.gms:play-services-maps:15.0.1'
     implementation files('libs/AMap_Location_V4.0.1_20180426.jar')
-
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-
     //dagger2
     implementation 'com.google.dagger:dagger:2.11'
     implementation 'com.google.dagger:dagger-android:2.11'
     implementation 'com.google.dagger:dagger-android-support:2.11'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
-
     //toast 动画
     implementation 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
     implementation 'com.squareup.picasso:picasso:2.4.0'
-
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'com.github.clans:fab:1.6.4'
-
     //弹窗库
     implementation 'com.afollestad.material-dialogs:commons:0.9.4.5'
     configurations {
         all*.exclude group: 'com.android.support', module: 'support-v13'
     }
+    implementation 'com.bigkoo:ConvenientBanner:2.1.4'
+    //地址变ConvenientBanner 大写了，额。。。
+    implementation files('libs/pstore-sdk-pstore-2.3.7-release.jar')
 
-    implementation 'com.bigkoo:ConvenientBanner:2.1.4'//地址变ConvenientBanner 大写了，额。。。
+    //ZXing
+    implementation 'com.google.zxing:core:3.3.0'
 
+    //列表刷新库
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-5'
 }

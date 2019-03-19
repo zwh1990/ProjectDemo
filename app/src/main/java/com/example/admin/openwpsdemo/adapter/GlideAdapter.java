@@ -33,6 +33,7 @@ public class GlideAdapter extends BaseRvAdapter<CustomImageSizeModel> {
                 .load(datas.get(position).getBaseUrl())
                 .skipMemoryCache(true)
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .placeholder(R.drawable.arrow)
                 .into((ImageView) holder.getView(R.id.img));
 
     }
